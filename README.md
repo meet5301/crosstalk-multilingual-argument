@@ -21,3 +21,7 @@ A simple, mobile-friendly multilingual conversation demo.
 
 ## Important limitations
 This is a text-first prototype with optional browser voice input/output. It is not a live phone/video call and does not capture two people speaking simultaneously. Translation depends on an external public endpoint and is not guaranteed for every language or message. For production, connect a supported translation provider through a secure serverless function and never expose private API keys in frontend code.
+
+
+## Two-way message rule
+Every Person A message is translated to Person B's selected language directly underneath. Every Person B message is translated to Person A's selected language directly underneath. The speaker automatically switches after each send.
