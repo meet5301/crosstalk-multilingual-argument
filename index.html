@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CrossTalk — Talk It Out</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#"><span class="logo-icon">↔</span> CrossTalk</a>
+    <span class="tag">UNDERSTAND EACH OTHER</span>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p class="eyebrow">TWO PEOPLE. DIFFERENT LANGUAGES.</p>
+      <h1>Have the conversation.<br><span>We'll translate.</span></h1>
+      <p class="intro-copy">Choose your languages, then talk or type. Say what you mean, disagree, interrupt, and work things out.</p>
+    </section>
+
+    <section class="language-card">
+      <div class="language">
+        <label for="langA">PERSON A SPEAKS</label>
+        <select id="langA">
+          <option value="en">English</option><option value="hi">Hindi</option><option value="gu">Gujarati</option>
+          <option value="es">Spanish</option><option value="fr">French</option><option value="de">German</option>
+          <option value="it">Italian</option><option value="pt">Portuguese</option><option value="ja">Japanese</option><option value="ko">Korean</option>
+        </select>
+      </div>
+      <div class="swap">↔</div>
+      <div class="language">
+        <label for="langB">PERSON B SPEAKS</label>
+        <select id="langB">
+          <option value="hi">Hindi</option><option value="en">English</option><option value="gu">Gujarati</option>
+          <option value="es">Spanish</option><option value="fr">French</option><option value="de">German</option>
+          <option value="it">Italian</option><option value="pt">Portuguese</option><option value="ja">Japanese</option><option value="ko">Korean</option>
+        </select>
+      </div>
+      <button id="startBtn" class="primary start">Start talking <span>→</span></button>
+    </section>
+
+    <section id="chat" class="chat hidden">
+      <div class="chat-top">
+        <div><span class="live-dot"></span><strong>Conversation</strong><small id="languageSummary">English ↔ Hindi</small></div>
+        <button id="resetBtn" class="quiet">Start over</button>
+      </div>
+
+      <div id="messages" class="messages">
+        <div class="welcome">
+          <div class="welcome-icon">💬</div>
+          <h2>What do you need to say?</h2>
+          <p>Pick who is speaking below. Your message and its translation will appear here.</p>
+        </div>
+      </div>
+
+      <div class="composer">
+        <label class="speaker-picker"><span>WHO'S SPEAKING?</span>
+          <select id="speaker"><option value="a">Person A</option><option value="b">Person B</option></select>
+        </label>
+        <textarea id="messageInput" rows="2" placeholder="Type your message in your language…"></textarea>
+        <div class="composer-buttons">
+          <button id="micBtn" class="icon-btn" title="Speak your message">🎙 <span>Speak</span></button>
+          <button id="interruptBtn" class="interrupt">⚡ Interrupt</button>
+          <button id="sendBtn" class="primary send">Send ↗</button>
+        </div>
+      </div>
+      <p class="help">Tip: Choose Person A or Person B before each message. Use Interrupt when you want to cut in.</p>
+    </section>
+
+    <section class="how">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div><b>1</b><strong>Choose languages</strong><p>Each person keeps their own language.</p></div>
+        <div><b>2</b><strong>Say your piece</strong><p>Type a message or use your microphone.</p></div>
+        <div><b>3</b><strong>Understand the reply</strong><p>The other person's translation appears under the message.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer>CrossTalk · A simple way to understand each other.</footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
